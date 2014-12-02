@@ -1,0 +1,776 @@
+/* TOOGLE SWICH */
+
+.onoffswitch
+  position: relative
+  width: 64px
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+
+.onoffswitch-checkbox
+  display: none
+
+.onoffswitch-label
+  display: block
+  overflow: hidden
+  cursor: pointer
+  border: 2px solid $navy
+  border-radius: 2px
+
+.onoffswitch-inner
+  width: 200%
+  margin-left: -100%
+  -moz-transition: margin 0.3s ease-in 0s
+  -webkit-transition: margin 0.3s ease-in 0s
+  -o-transition: margin 0.3s ease-in 0s
+  transition: margin 0.3s ease-in 0s
+
+.onoffswitch-inner:before, .onoffswitch-inner:after
+  float: left
+  width: 50%
+  height: 20px
+  padding: 0
+  line-height: 20px
+  font-size: 12px
+  color: white
+  font-family: Trebuchet, Arial, sans-serif
+  font-weight: bold
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+.onoffswitch-inner:before
+  content: "ON"
+  padding-left: 10px
+  background-color: $navy
+  color: #FFFFFF
+
+.onoffswitch-inner:after
+  content: "OFF"
+  padding-right: 10px
+  background-color: #FFFFFF
+  color: #999999
+  text-align: right
+
+.onoffswitch-switch
+  width: 20px
+  margin: 0px
+  background: #FFFFFF
+  border: 2px solid $navy
+  border-radius: 2px
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 44px
+  -moz-transition: all 0.3s ease-in 0s
+  -webkit-transition: all 0.3s ease-in 0s
+  -o-transition: all 0.3s ease-in 0s
+  transition: all 0.3s ease-in 0s
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner
+  margin-left: 0
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch
+  right: 0px
+
+/* CHOSEN PLUGIN */
+
+.chosen-container-single .chosen-single
+  background: #ffffff
+  box-shadow: none
+  -moz-box-sizing: border-box
+  background-color: #FFFFFF
+  border: 1px solid #CBD5DD
+  border-radius: 2px
+  cursor: text
+  height: auto !important
+  margin: 0
+  min-height: 30px
+  overflow: hidden
+  padding: 4px 12px
+  position: relative
+  width: 100%
+
+.chosen-container-multi .chosen-choices li.search-choice
+  background: #f1f1f1
+  border: 1px solid #ededed
+  border-radius: 2px
+  box-shadow: none
+  color: #333333
+  cursor: default
+  line-height: 13px
+  margin: 3px 0 3px 5px
+  padding: 3px 20px 3px 5px
+  position: relative
+
+/* PAGINATIN */
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus
+  background-color: #f4f4f4
+  border-color: #DDDDDD
+  color: inherit
+  cursor: default
+  z-index: 2
+
+.pagination > li > a, .pagination > li > span
+  background-color: #FFFFFF
+  border: 1px solid #DDDDDD
+  color: inherit
+  float: left
+  line-height: 1.42857
+  margin-left: -1px
+  padding: 4px 10px
+  position: relative
+  text-decoration: none
+
+/* TOOLTIPS */
+
+.tooltip-inner
+  background-color: #2F4050
+
+.tooltip.top .tooltip-arrow
+  border-top-color: #2F4050
+
+.tooltip.right .tooltip-arrow
+  border-right-color: #2F4050
+
+.tooltip.bottom .tooltip-arrow
+  border-bottom-color: #2F4050
+
+.tooltip.left .tooltip-arrow
+  border-left-color: #2F4050
+
+/* EASY PIE CHART*/
+
+.easypiechart
+  position: relative
+  text-align: center
+
+.easypiechart .h2
+  margin-left: 10px
+  margin-top: 10px
+  display: inline-block
+
+.easypiechart canvas
+  top: 0
+  left: 0
+
+.easypiechart .easypie-text
+  line-height: 1
+  position: absolute
+  top: 33px
+  width: 100%
+  z-index: 1
+
+.easypiechart img
+  margin-top: -4px
+
+.jqstooltip
+  -webkit-box-sizing: content-box
+  -moz-box-sizing: content-box
+  box-sizing: content-box
+
+/* FULLCALENDAR */
+
+.fc-state-default
+  background-color: #ffffff
+  background-image: none
+  background-repeat: repeat-x
+  box-shadow: none
+  color: #333333
+  text-shadow: none
+
+.fc-state-default
+  border: 1px solid
+
+.fc-button
+  color: inherit
+  border: 1px solid $border-color
+  cursor: pointer
+  display: inline-block
+  height: 1.9em
+  line-height: 1.9em
+  overflow: hidden
+  padding: 0 0.6em
+  position: relative
+  white-space: nowrap
+
+.fc-state-active
+  background-color: $navy
+  border-color: $navy
+  color: #ffffff
+
+.fc-header-title h2
+  font-size: 16px
+  font-weight: 600
+  color: inherit
+
+.fc-content .fc-widget-header, .fc-content .fc-widget-content
+  border-color: $border-color
+  font-weight: normal
+
+.fc-border-separate tbody
+  background-color: #F8F8F8
+
+.fc-state-highlight
+  background: none repeat scroll 0 0 #FCF8E3
+
+.external-event
+  padding: 5px 10px
+  border-radius: 2px
+  cursor: pointer
+  margin-bottom: 5px
+
+.fc-ltr .fc-event-hori.fc-event-end, .fc-rtl .fc-event-hori.fc-event-start
+  border-radius: 2px
+
+.fc-event,
+.fc-agenda .fc-event-time,
+.fc-event a
+  padding: 4px 6px
+  background-color: $navy
+  border-color: $navy
+
+.fc-event-time, .fc-event-title
+  color: #717171
+  padding: 0 1px
+
+.ui-calendar .fc-event-time, .ui-calendar .fc-event-title
+  color: #fff
+
+/* Chat */
+.chat-activity-list .chat-element
+  border-bottom: 1px solid $border-color
+
+.chat-element:first-child
+  margin-top: 0
+
+.chat-element
+  padding-bottom: 15px
+
+.chat-element, .chat-element .media
+  margin-top: 15px
+
+.chat-element, .media-body
+  overflow: hidden
+
+.chat-element > .pull-left
+  margin-right: 10px
+
+.chat-element img.img-circle, .dropdown-messages-box img.img-circle
+  width: 38px
+  height: 38px
+
+.chat-element .well
+  border: 1px solid $border-color
+  box-shadow: none
+  margin-top: 10px
+  margin-bottom: 5px
+  padding: 10px 20px
+  font-size: 11px
+  line-height: 16px
+
+.chat-element .actions
+  margin-top: 10px
+
+.chat-element .photos
+  margin: 10px 0
+
+.right.chat-element > .pull-right
+  margin-left: 10px
+
+.chat-photo
+  max-height: 180px
+  border-radius: 4px
+  overflow: hidden
+  margin-right: 10px
+  margin-bottom: 10px
+
+.chat
+  margin: 0
+  padding: 0
+  list-style: none
+
+.chat li
+  margin-bottom: 10px
+  padding-bottom: 5px
+  border-bottom: 1px dotted #B3A9A9
+
+.chat li.left .chat-body
+  margin-left: 60px
+
+.chat li.right .chat-body
+  margin-right: 60px
+
+.chat li .chat-body p
+  margin: 0
+  color: #777777
+
+.panel .slidedown .glyphicon,
+.chat .glyphicon
+  margin-right: 5px
+
+.chat-panel .panel-body
+  height: 350px
+  overflow-y: scroll
+
+/* LIST GROUP */
+
+a.list-group-item.active, a.list-group-item.active:hover, a.list-group-item.active:focus
+  background-color: $navy
+  border-color: $navy
+  color: #FFFFFF
+  z-index: 2
+
+.list-group-item-heading
+  margin-top: 10px
+
+.list-group-item-text
+  margin: 0 0 10px
+  color: inherit
+  font-size: 12px
+  line-height: inherit
+
+.no-padding .list-group-item
+  border-left: none
+  border-right: none
+  border-bottom: none
+
+.no-padding .list-group-item:first-child
+  border-left: none
+  border-right: none
+  border-bottom: none
+  border-top: none
+
+.no-padding .list-group
+  margin-bottom: 0
+
+.list-group-item
+  background-color: inherit
+  border: 1px solid $border-color
+  display: block
+  margin-bottom: -1px
+  padding: 10px 15px
+  position: relative
+
+/* FLOT CHART  */
+
+.flot-chart
+  display: block
+  height: 200px
+
+.widget .flot-chart.dashboard-chart
+  display: block
+  height: 120px
+  margin-top: 40px
+
+.flot-chart.dashboard-chart
+  display: block
+  height: 180px
+  margin-top: 40px
+
+.flot-chart-content
+  width: 100%
+  height: 100%
+
+.jqstooltip
+  position: absolute
+  display: block
+  left: 0px
+  top: 0px
+  visibility: hidden
+  background: rgb(43, 48, 58)
+  background-color: rgba(43, 48, 58, 0.8)
+  color: white
+  text-align: left
+  white-space: nowrap
+  z-index: 10000
+  padding: 5px 5px 5px 5px
+  min-height: 22px
+  border-radius: 3px
+
+.jqsfield
+  color: white
+  text-align: left
+
+.h-200
+  min-height: 200px
+
+.legendLabel
+  padding-left: 5px
+
+.stat-list li:first-child
+  margin-top: 0
+
+.stat-list
+  list-style: none
+  padding: 0
+  margin: 0
+
+.stat-percent
+  float: right
+
+.stat-list li
+  margin-top: 15px
+  position: relative
+
+/* DATATABLES */
+
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc_disabled,
+table.dataTable thead .sorting_desc_disabled
+  background: transparent
+
+table.dataTable thead .sorting_asc:after
+  float: right
+  font-family: fontawesome
+
+table.dataTable thead .sorting_desc:after
+  content: "\f0dd"
+  float: right
+  font-family: fontawesome
+
+table.dataTable thead .sorting:after
+  content: "\f0dc"
+  float: right
+  font-family: fontawesome
+  color: rgba(50, 50, 50, .5)
+
+/* CIRCLE */
+
+.img-circle
+  border-radius: 50%
+
+.btn-circle
+  width: 30px
+  height: 30px
+  padding: 6px 0
+  border-radius: 15px
+  text-align: center
+  font-size: 12px
+  line-height: 1.428571429
+
+.btn-circle.btn-lg
+  width: 50px
+  height: 50px
+  padding: 10px 16px
+  border-radius: 25px
+  font-size: 18px
+  line-height: 1.33
+
+.btn-circle.btn-xl
+  width: 70px
+  height: 70px
+  padding: 10px 16px
+  border-radius: 35px
+  font-size: 24px
+  line-height: 1.33
+
+.show-grid [class^="col-"]
+  padding-top: 10px
+  padding-bottom: 10px
+  border: 1px solid #ddd
+  background-color: #eee !important
+
+.show-grid
+  margin: 15px 0
+
+/* ANIMATION */
+
+.css-animation-box h1
+  font-size: 44px
+
+.animation-efect-links a
+  padding: 4px 6px
+  font-size: 12px
+
+#animation_box
+  background-color: #f9f8f8
+  border-radius: 16px
+  width: 80%
+  margin: 0 auto
+  padding-top: 80px
+
+.animation-text-box
+  position: absolute
+  margin-top: 40px
+  left: 50%
+  margin-left: -100px
+  width: 200px
+
+.animation-text-info
+  position: absolute
+  margin-top: -60px
+  left: 50%
+  margin-left: -100px
+  width: 200px
+  font-size: 10px
+
+.animation-text-box h2
+  font-size: 54px
+  font-weight: 600
+  margin-bottom: 5px
+
+.animation-text-box p
+  font-size: 12px
+  text-transform: uppercase
+
+/* PEACE */
+
+.pace .pace-progress
+  background: $navy
+  position: fixed
+  z-index: 2000
+  top: 0px
+  left: $sidebar-width
+  height: 2px
+
+  -webkit-transition: width 1s
+  -moz-transition: width 1s
+  -o-transition: width 1s
+  transition: width 1s
+
+.body-small .pace .pace-progress
+  left: 0px
+
+.pace-inactive
+  display: none
+
+/* WIDGETS */
+
+.widget
+  border-radius: 5px
+  padding: 15px 20px
+  margin-bottom: 10px
+  margin-top: 10px
+
+.widget.style1 h2
+  font-size: 30px
+
+.widget h2, .widget h3
+  margin-top: 5px
+  margin-bottom: 0
+
+.widget-text-box
+  padding: 20px
+  border: 1px solid $border-color
+  background: #ffffff
+
+.widget-head-color-box
+  border-radius: 5px 5px 0px 0px
+  margin-top: 10px
+
+.widget .flot-chart
+  height: 100px
+
+.vertical-align div
+  display: inline-block
+  vertical-align: middle
+
+.vertical-align h2, .vertical-align h3
+  margin: 0
+
+.todo-list
+  list-style: none outside none
+  margin: 0
+  padding: 0
+  font-size: 14px
+
+.todo-list.small-list
+  font-size: 12px
+
+.todo-list.small-list > li
+  background: $gray
+  border-left: none
+  border-right: none
+  border-radius: 4px
+  color: inherit
+  margin-bottom: 2px
+  padding: 6px 6px 6px 12px
+
+.todo-list.small-list .btn-xs, .todo-list.small-list .btn-group-xs > .btn
+  border-radius: 5px
+  font-size: 10px
+  line-height: 1.5
+  padding: 1px 2px 1px 5px
+
+.todo-list > li
+  background: $gray
+  border-left: 6px solid $border-color
+  border-right: 6px solid $border-color
+  border-radius: 4px
+  color: inherit
+  margin-bottom: 2px
+  padding: 10px
+
+.todo-list .handle
+  cursor: move
+  display: inline-block
+  font-size: 16px
+  margin: 0 5px
+
+.todo-list > li .label
+  font-size: 9px
+  margin-left: 10px
+
+.check-link
+  font-size: 16px
+
+.todo-completed
+  text-decoration: line-through
+
+.geo-statistic h1
+  font-size: 36px
+  margin-bottom: 0
+
+/* INPUTS */
+.inline
+  display: inline-block !important
+
+.input-s-sm
+  width: 120px
+
+.input-s
+  width: 200px
+
+.input-s-lg
+  width: 250px
+
+.i-checks
+  padding-left: 0
+
+.form-control
+  background-color: #FFFFFF
+  background-image: none
+  border: 1px solid #e5e6e7
+  border-radius: 1px
+  color: inherit
+  display: block
+  padding: 6px 12px
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s
+  width: 100%
+
+.form-control:focus
+  border-color: $navy
+
+.has-success .form-control
+  border-color: $navy
+
+.has-warning .form-control
+  border-color: $yellow
+
+.has-error .form-control
+  border-color: $red
+
+.has-success .control-label
+  color: $navy
+
+.has-warning .control-label
+  color: $yellow
+
+.has-error .control-label
+  color: $red
+
+.input-group-addon
+  background-color: #fff
+  border: 1px solid #E5E6E7
+  border-radius: 1px
+  color: inherit
+  font-size: 14px
+  font-weight: 400
+  line-height: 1
+  padding: 6px 12px
+  text-align: center
+
+.spinner-buttons.input-group-btn .btn-xs
+  line-height: 1.13
+
+.spinner-buttons.input-group-btn
+  width: 20%
+
+.noUi-connect
+  background: none repeat scroll 0 0 $navy
+  box-shadow: none
+
+.slider_red .noUi-connect
+  background: none repeat scroll 0 0 $red
+  box-shadow: none
+
+/* SWITCHES */
+.onoffswitch
+  position: relative
+  width: 54px
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+
+.onoffswitch-checkbox
+  display: none
+
+.onoffswitch-label
+  display: block
+  overflow: hidden
+  cursor: pointer
+  border: 2px solid #1AB394
+  border-radius: 3px
+
+.onoffswitch-inner
+  display: block
+  width: 200%
+  margin-left: -100%
+  -moz-transition: margin 0.3s ease-in 0s
+  -webkit-transition: margin 0.3s ease-in 0s
+  -o-transition: margin 0.3s ease-in 0s
+  transition: margin 0.3s ease-in 0s
+
+.onoffswitch-inner:before, .onoffswitch-inner:after
+  display: block
+  float: left
+  width: 50%
+  height: 16px
+  padding: 0
+  line-height: 16px
+  font-size: 10px
+  color: white
+  font-family: Trebuchet, Arial, sans-serif
+  font-weight: bold
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+.onoffswitch-inner:before
+  content: "ON"
+  padding-left: 7px
+  background-color: #1AB394
+  color: #FFFFFF
+
+.onoffswitch-inner:after
+  content: "OFF"
+  padding-right: 7px
+  background-color: #FFFFFF
+  color: #919191
+  text-align: right
+
+.onoffswitch-switch
+  display: block
+  width: 18px
+  margin: 0px
+  background: #FFFFFF
+  border: 2px solid #1AB394
+  border-radius: 3px
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 36px
+  -moz-transition: all 0.3s ease-in 0s
+  -webkit-transition: all 0.3s ease-in 0s
+  -o-transition: all 0.3s ease-in 0s
+  transition: all 0.3s ease-in 0s
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner
+  margin-left: 0
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch
+  right: 0px

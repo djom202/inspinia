@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>INSPINIA Admin Theme Documentation</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <style>
+
+        .documentation .jumbotron .row {
+            padding-top: 60px;
+        }
+
+    </style>
+</head>
+<body class="documentation">
+
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">INSPINIA - Documentation</a>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>INSPINIA - Responsible Admin Theme</h2>
+
+                <p>Thank you for purchasing INSPINIA admin theme. If you have any questions about the template, please feel free to contact us via email: <a href="mailto:support@webapplayers.com">support@webapplayers.com</a>.<br/>
+                    Thanks very much!</p>
+                <small>
+
+                    <strong>Documentation created:</strong> 19/05/2014<br/>
+                    <strong>Latest update:</strong> 08/09/2014<br/>
+                    <strong>By:</strong> WebAppLayers Team<br/>
+
+                </small>
+                <br/>
+                <small>
+                    For AngularJs documentation go to: <a href="angular.html">Angular documentation.</a>
+                </small>
+            </div>
+            <div class="col-md-6">
+                <img src="img/preview.png" alt="screen" class="img-responsive"/>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>About the template</h3>
+            <p>INSPINIA has a clean and minimalistic design which helps you create an awesome and powerful project. It is perfectly designed and precisely prepared. Template was built based on the latest standards and recommendations. INSPINIA theme
+                is powered by Twitter Bootstrap v3 - the most popular front-end framework.</p>
+            <div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+            <h3>Structure</h3>
+            <h4>Folders and files</h4>
+            <p>File pack containing INSPINIA template consists of 5 folders and 43 html files (in the main folder).</p>
+            <div><pre class="prettyprint linenums">
+<code>inspinia_admin_theme/
+├── <strong>Angular_Seed_Project/</strong>
+├── <strong>Angular_version/</strong>
+├── <strong>LESS/</strong>
+├── <strong>SASS/</strong>
+├── <strong>Static_version/</strong>
+    ├── <strong>css/</strong>
+    ├── <strong>css/</strong>
+    ├── <strong>font-awsome/</strong>
+    ├── <strong>fonts/</strong>
+    ├── <strong>img/</strong>
+    ├── <strong>js/</strong>
+    ├── 404.html
+    ├── 500.html
+    ├── angularjs.html
+    ├── badges_labels.html
+    ├── basic_gallery.html
+    ├── boxed_layout.html
+    ├── buttons.html
+    ├── calendar.html
+    ├── carousel.html
+    ├── contacts.html
+    ├── css_animation.html
+    ├── dashboard_2.html
+    ├── dashboard_3.html
+    ├── draggable_panels.html
+    ├── empy_page.html
+    ├── faq.html
+    ├── file_manager.html
+    ├── form_advanced.html
+    ├── form_basic.html
+    ├── form_editors.html
+    ├── form_file_upload.html
+    ├── form_wizard.html
+    ├── graph_chartjs.html
+    ├── graph_flot.html
+    ├── graph_morris.html
+    ├── graph_peity.html
+    ├── graph_rickshaw.html
+    ├── graph_sparkline.html
+    ├── grid_options.html
+    ├── icons.html
+    ├── index.html
+    ├── invoice.html
+    ├── invoice_print.html
+    ├── lockscreen.html
+    ├── login.html
+    ├── mail_compose.html
+    ├── mail_detail.html
+    ├── mailbox.html
+    ├── notifications.html
+    ├── pin_board.html
+    ├── profile.html
+    ├── project_detail.html
+    ├── projects.html
+    ├── register.html
+    ├── search_result.html
+    ├── skin-config.html
+    ├── table_basic.html
+    ├── table_data_tables.html
+    ├── tabs_panels.html
+    ├── timeline.html
+    ├── typography.html
+    ├── video.html
+    ├── widgets.html
+</code></pre></div>
+
+        </div>
+        <div class="col-md-6">
+            <h3>Main HTML elements</h3>
+            <p>Theme files have almost unchanging structure consisting of:</p>
+            <ol>
+                <li><code>#wrapper</code> main container of body elements.</li>
+                <li><code>nav .navbar-static-side</code> left navigation <b>menu</b>.</li>
+                <li><code>#page-wrapper</code> main container for page elements.</li>
+                <li><code>nav .navbar-static-top</code> top navigation with second menu.</li>
+                <li><code>.page-heading</code> container with page title and breadcrumb</li>
+                <li><code>.wrapper-content</code> main container for html elements.</li>
+                <li><code>.footer</code> main container for footer.</li>
+            </ol>
+
+            <a target="_blank" href="img/page.png"><img class="img-responsive" src="img/page.png" alt="page structure"></a>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-lg-12">
+            <h3>Page Head</h3>
+            <p>Page <code>&lt;head /&gt;</code> contains Metadata, CSS files.</p>
+            <pre class="prettyprint linenums">
+&lt;!DOCTYPE html>
+&lt;head>
+
+    &lt;!-- Metadata --&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;INSPINIA | Page&lt;/title&gt;
+
+    &lt;!-- CSS Files --&gt;
+    &lt;link href="css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link href="font-awesome/css/font-awesome.css" rel="stylesheet"&gt;
+    &lt;link href="css/animate.css" rel="stylesheet"&gt;
+    &lt;link href="css/style.css" rel="stylesheet"&gt;
+
+&lt;/head&gt;</pre>
+
+            <hr>
+            <h3>Main menu - navigation</h3>
+            <p>Navigation menu with profile submenu.</p>
+            <pre class="prettyprint linenums">
+&lt;ul class="nav" id="side-menu"&gt;
+    &lt;li class="nav-header"&gt;
+        &lt;div class="dropdown profile-element"&gt; &lt;span&gt;
+            &lt;img alt="image" class="img-circle" src="img/profile_small.jpg"&gt;
+             &lt;/span&gt;
+            &lt;a data-toggle="dropdown" class="dropdown-toggle" href="#"&gt;
+            &lt;span class="clear"&gt; &lt;span class="block m-t-xs"&gt; &lt;strong class="font-bold"&gt;Amelia Smith&lt;/strong&gt;
+             &lt;/span&gt; &lt;span class="text-muted text-xs block"&gt;Art Director &lt;b class="caret"&gt;&lt;/b&gt;&lt;/span&gt; &lt;/span&gt; &lt;/a&gt;
+            &lt;ul class="dropdown-menu animated fadeInRight m-t-xs"&gt;
+                &lt;li&gt;&lt;a href="profile.html"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="contacts.html"&gt;Contacts&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="mailbox.html"&gt;Mailbox&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="divider"&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="login.html"&gt;Logout&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class="logo-element"&gt;
+            IN+
+        &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;!-- All li elements o navigation --&gt;
+    &lt;/li&gt;
+
+&lt;/ul&gt; </pre>
+            <hr>
+            <h3>Second menu</h3>
+            <p>Menu for notifications and primary functions such as logout or global search.</p>
+            <pre class="prettyprint linenums">
+&lt;nav class="navbar navbar-static-top  " role="navigation"&gt;
+        &lt;div class="navbar-header"&gt;
+            &lt;a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"&gt;&lt;i class="fa fa-bars"&gt;&lt;/i&gt; &lt;/a&gt;
+            &lt;form role="search" class="navbar-form-custom" method="post" action="search_results.html"&gt;
+                &lt;div class="form-group"&gt;
+                    &lt;input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search"&gt;
+                &lt;/div&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+            &lt;ul class="nav navbar-top-links navbar-right"&gt;
+                &lt;li&gt;
+                    &lt;span class="m-r-sm text-muted welcome-message"&gt;Welcome to INSPINIA+ Admin Theme.&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li class="dropdown"&gt;
+                    &lt;a class="dropdown-toggle count-info" data-toggle="dropdown" href="#"&gt;
+                        &lt;i class="fa fa-envelope"&gt;&lt;/i&gt;  &lt;span class="label label-warning"&gt;16&lt;/span&gt;
+                    &lt;/a&gt;
+                    &lt;ul class="dropdown-menu dropdown-messages"&gt;
+                        &lt;li&gt;
+                            &lt;div class="dropdown-messages-box"&gt;
+                                &lt;a href="profile.html" class="pull-left"&gt;
+                                    &lt;img alt="image" class="img-circle" src="img/a7.jpg"&gt;
+                                &lt;/a&gt;
+                                &lt;div class="media-body"&gt;
+                                    &lt;small class="pull-right"&gt;46h ago&lt;/small&gt;
+                                    &lt;strong&gt;Mike Loreipsum&lt;/strong&gt; started following &lt;strong&gt;Monica Smith&lt;/strong&gt;. &lt;br&gt;
+                                    &lt;small class="text-muted"&gt;3 days ago at 7:58 pm - 10.06.2014&lt;/small&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/li&gt;
+                        &lt;li class="divider"&gt;&lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;div class="dropdown-messages-box"&gt;
+                                &lt;a href="profile.html" class="pull-left"&gt;
+                                    &lt;img alt="image" class="img-circle" src="img/a4.jpg"&gt;
+                                &lt;/a&gt;
+                                &lt;div class="media-body "&gt;
+                                    &lt;small class="pull-right text-navy"&gt;5h ago&lt;/small&gt;
+                                    &lt;strong&gt;Chris Johnatan Overtunk&lt;/strong&gt; started following &lt;strong&gt;Monica Smith&lt;/strong&gt;. &lt;br&gt;
+                                    &lt;small class="text-muted"&gt;Yesterday 1:21 pm - 11.06.2014&lt;/small&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/li&gt;
+                        &lt;li class="divider"&gt;&lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;div class="dropdown-messages-box"&gt;
+                                &lt;a href="profile.html" class="pull-left"&gt;
+                                    &lt;img alt="image" class="img-circle" src="img/profile.jpg"&gt;
+                                &lt;/a&gt;
+                                &lt;div class="media-body "&gt;
+                                    &lt;small class="pull-right"&gt;23h ago&lt;/small&gt;
+                                    &lt;strong&gt;Monica Smith&lt;/strong&gt; love &lt;strong&gt;Kim Smith&lt;/strong&gt;. &lt;br&gt;
+                                    &lt;small class="text-muted"&gt;2 days ago at 2:30 am - 11.06.2014&lt;/small&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/li&gt;
+                        &lt;li class="divider"&gt;&lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;div class="text-center link-block"&gt;
+                                &lt;a href="mailbox.html"&gt;
+                                    &lt;i class="fa fa-envelope"&gt;&lt;/i&gt; &lt;strong&gt;Read All Messages&lt;/strong&gt;
+                                &lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li class="dropdown"&gt;
+                    &lt;a class="dropdown-toggle count-info" data-toggle="dropdown" href="#"&gt;
+                        &lt;i class="fa fa-bell"&gt;&lt;/i&gt;  &lt;span class="label label-primary"&gt;8&lt;/span&gt;
+                    &lt;/a&gt;
+                    &lt;ul class="dropdown-menu dropdown-alerts"&gt;
+                        &lt;li&gt;
+                            &lt;a href="mailbox.html"&gt;
+                                &lt;div&gt;
+                                    &lt;i class="fa fa-envelope fa-fw"&gt;&lt;/i&gt; You have 16 messages
+                                    &lt;span class="pull-right text-muted small"&gt;4 minutes ago&lt;/span&gt;
+                                &lt;/div&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="divider"&gt;&lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="profile.html"&gt;
+                                &lt;div&gt;
+                                    &lt;i class="fa fa-twitter fa-fw"&gt;&lt;/i&gt; 3 New Followers
+                                    &lt;span class="pull-right text-muted small"&gt;12 minutes ago&lt;/span&gt;
+                                &lt;/div&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="divider"&gt;&lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="grid_options.html"&gt;
+                                &lt;div&gt;
+                                    &lt;i class="fa fa-upload fa-fw"&gt;&lt;/i&gt; Server Rebooted
+                                    &lt;span class="pull-right text-muted small"&gt;4 minutes ago&lt;/span&gt;
+                                &lt;/div&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="divider"&gt;&lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;div class="text-center link-block"&gt;
+                                &lt;a href="notifications.html"&gt;
+                                    &lt;strong&gt;See All Alerts&lt;/strong&gt;
+                                    &lt;i class="fa fa-angle-right"&gt;&lt;/i&gt;
+                                &lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="login.html"&gt;
+                        &lt;i class="fa fa-sign-out"&gt;&lt;/i&gt; Log out
+                    &lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+&lt;/nav&gt;
+
+                </pre>
+            <hr>
+            <h3>Content</h3>
+            <p>Main content wrapper with page heading and page content.</p>
+            <pre class="prettyprint linenums">
+&lt;div class="row wrapper border-bottom white-bg page-heading"&gt;
+                &lt;div class="col-lg-9"&gt;
+                    &lt;h2&gt;This is main title&lt;/h2&gt;
+                    &lt;ol class="breadcrumb"&gt;
+                        &lt;li&gt;
+                            &lt;a href="index.html"&gt;This is&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="active"&gt;
+                            &lt;strong&gt;Breadcrumb&lt;/strong&gt;
+                        &lt;/li&gt;
+                    &lt;/ol&gt;
+                &lt;/div&gt;
+                &lt;div class="col-lg-3"&gt;
+                    &lt;div class="title-action"&gt;
+                        &lt;a href="" class="btn btn-primary"&gt;This is action area&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col-lg-12"&gt;
+                &lt;div class="wrapper wrapper-content"&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+&lt;/div&gt;
+                </pre>
+
+            <hr>
+            <h3>Skins</h3>
+            <p>Inspinai theme has 4 diferent skins</p>
+            <p><strong>To change skin you just have to add skin class to body element.</strong></p>
+            <p>For example: to add skin Inspinia Ultra you just need to add <code>.skin-2</code> class to body element.</p>
+            <p>In LESS files skins.less you can find style for the skin. Below is a representation of css classes demand color skin.</p>
+            <ul>
+                <li><code>.skin-1</code> - Blue Light  </li>
+                <li><code>.skin-2</code> - Inspinia Ultra  </li>
+                <li><code>.skin-3</code> - Yellow/purple  </li>
+                <li>Defaut skin does not need any class</li>
+            </ul>
+
+            <hr>
+            <h3>Fixed navbar</h3>
+            <p>Fixed navbar is a top navbar that is sticked on screen. </p>
+            <p><strong>To add fixed top navbar you just need to add <code>.fixed-nav</code> class to body element.</strong></p>
+
+            <hr/>
+            <h3>Fixed footer</h3>
+            <p>Fixed footer is a bottom footer that is sticked on screen. </p>
+            <p><strong>To add fixed bottom footer you just need to add <code>.fixed</code> class to footer class.</strong></p>
+
+            <hr/>
+            <h3>Fixed sidebar</h3>
+            <p>Fixed sidebar is a sidebar that is sticked on screen. </p>
+            <p>To add fixed sidebar you just need to add <code>.fixed-sidebar</code> class to body element and uncomment Fixed Sidebar script in inspinia.js file in 60 line.
+            This will run slimScroll plugin to the sidebar element on load.<br/><br/>
+               <i> When you run fixed sidebar and fixed topbar on demo you will see that sidebar is to shor but this is only on demo. When you initial run fixed sidebar and top fixed then everything will be fit to the screen.</i>
+            </strong></p>
+
+            <hr>
+            <h3>Mainly scripts</h3>
+            <p>Core script structure used in ever file.</p>
+            <pre class="prettyprint linenums">
+    &lt;!-- Mainly scripts --&gt;
+    &lt;script src="js/jquery-1.10.2.js"&gt;&lt;/script&gt;
+    &lt;script src="js/bootstrap.min.js"&gt;&lt;/script&gt;
+    &lt;script src="js/plugins/metisMenu/jquery.metisMenu.js"&gt;&lt;/script&gt;
+
+    &lt;!-- Custom and plugin javascript --&gt;
+    &lt;script src="js/inspinia.js"&gt;&lt;/script&gt;
+    &lt;script src="js/plugins/pace/pace.min.js"&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+        $(document).ready(function(){
+            &lt;!-- scripts --&gt;
+        });
+    &lt;/script&gt;
+                </pre>
+            <hr>
+            <h3>Any Questions?</h3>
+        <p>For further questions visit our profile page (WebAppLayers) on wrapbootstrap.com or contact as with email: <a href="mailto:support@webapplayers.com">support@webapplayers.com</a> </p>
+            <hr>
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        <p>&copy; WebAppLayers 2014 | INSPINIA Admin Theme</p>
+    </footer>
+</div>
+</div>
+
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/google-code-prettify/prettify.js"></script>
+
+<script>
+        $(function(){
+            window.prettyPrint && prettyPrint();
+        })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Morris.js Charts</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a>Graphs</a>
+            </li>
+            <li class="active">
+                <strong>Morris.js Charts</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight" ng-controller="morrisChartCtrl as morrisChart">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Area Chart Example
+                        <small>With custom colors.</small>
+                    </h5>
+                    <div ibox-tools></div>
+                </div>
+                <div class="ibox-content" style="position: relative">
+                    <div morris-area id="morris-area-chart" chart-options="morrisChart.areaOptions"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Bar Chart Example </h5>
+
+                    <div ibox-tools></div>
+                </div>
+                <div class="ibox-content">
+                    <div morris-bar id="morris-bar-chart" chart-options="morrisChart.barOptions"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Line Chart Example </h5>
+
+                    <div ibox-tools></div>
+                </div>
+                <div class="ibox-content">
+                    <div morris-line id="morris-line-chart" chart-options="morrisChart.lineOptions"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Donut Chart Example</h5>
+
+                    <div ibox-tools></div>
+                </div>
+                <div class="ibox-content">
+                    <div morris-donut id="morris-donut-chart" chart-options="morrisChart.donutOptions"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Simple one line Example </h5>
+
+                    <div ibox-tools></div>
+                </div>
+                <div class="ibox-content">
+                    <div morris-line id="morris-one-line-chart" chart-options="morrisChart.oneLineOptions"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

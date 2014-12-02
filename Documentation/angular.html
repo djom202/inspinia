@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>INSPINIA Admin Theme Documentation</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <style>
+
+        .documentation .jumbotron .row {
+            padding-top: 60px;
+        }
+
+    </style>
+</head>
+<body class="documentation">
+
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">INSPINIA - Documentation</a>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="img/angular_logo.png" alt="angular_logo">
+                <h2>Inspinia AngularJS</h2>
+                <small>
+                    Inspinia AngularJs is full supported Angularjs version of INSPINIA theme.
+                </small>
+                    <br/>
+                <p>Thank you for purchasing INSPINIA admin theme. If you have any questions about the template, please feel free to contact us via email: <a href="mailto:support@webapplayers.com">support@webapplayers.com</a>.<br/>
+                    Thanks very much!</p>
+                <small>
+
+                    <strong>Documentation created:</strong> 02/09/2014<br/>
+                    <strong>Latest update:</strong> 08/09/2014<br/>
+                    <strong>By:</strong> WebAppLayers Team<br/>
+
+                </small>
+                <br/>
+                <small>
+                    For HTML/CSS documentation go to: <a href="index.html">Static HTML/CSS documentation.</a>
+                </small>
+            </div>
+            <div class="col-md-6">
+                <img src="img/preview.png" alt="screen" class="img-responsive"/>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>About the documentation</h3>
+            <p>
+                This documentation is focused on AngularJs version. It assumes a minimum knowledge of angular framework. It describe mainly files and structure in project. For any standard element and function of this theme like (fixed sidebar, fixed navbar, skins, footer etc) please go to HTML/CSS documentation on index.html file as this is the same on bouth version.
+
+            </p>
+            <div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+            <h3>Structure</h3>
+            <h4>Folders and files</h4>
+            <p>File pack containing INSPINIA Angular template consists of 6 folders and 6 html files (in the main folder).</p>
+            <div><pre class="prettyprint linenums">
+<code>Angular_version/
+├── <strong>css/</strong>
+├── <strong>font-awsome/</strong>
+├── <strong>fonts/</strong>
+├── <strong>img/</strong>
+├── <strong>js/</strong>
+├── <strong>views/</strong>
+├── 404.html
+├── 500.html
+├── index.html
+├── lockscreen.html
+├── login.html
+├── register.html </code></pre></div>
+
+                        <div><pre class="prettyprint linenums">
+<code>js/
+    ├── <strong>angular/</strong>
+    ├── <strong>font-bootstrap/</strong>
+    ├── <strong>jquery/</strong>
+    ├── <strong>plugins/</strong>
+    ├── <strong>ui-router/</strong>
+    ├── app.js
+    ├── config.js
+    ├── controllers.js
+    ├── directives.js
+    ├── logininspinia.js </code></pre></div>
+
+        </div>
+        <div class="col-md-6">
+            <h3>Main HTML elements</h3>
+            <p>Main index file are created with few main elements:</p>
+            <ol>
+                <li><code>navigation</code> left sidebar navigation.</li>
+                <li><code>top navbar</code> top navigation with second menu.</li>
+                <li><code>ui-view</code> main container for page elements.</li>
+                <li><code>footer</code> footer element.</li>
+            </ol>
+
+            <a target="_blank" href="img/page_angular.png"><img class="img-responsive" src="img/page_angular.png" alt="page structure"></a>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-lg-12">
+            <h3>Page Head</h3>
+            <p>Page <code>&lt;head /&gt;</code> contains Metadata and all CSS files for theme and for all plugins. In your app you can choce only that file that you will use.</p>
+            <pre class="prettyprint linenums">
+
+&lt;!DOCTYPE html&gt;
+&lt;html ng-app="inspinia"&gt;
+&lt;head&gt
+
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+    &lt;!-- Page title set with pageTitle directive in config.js --&gt;
+    &lt;title page-title&gt&lt;/title&gt;
+
+    &lt;!-- All css files --&gt;
+
+&lt;/head&gt
+</pre>
+
+            <hr>
+            <h3>Main file structure</h3>
+            <p>IMPORTANT - Main stucture of index.html file.</p>
+            <pre class="prettyprint linenums">
+&lt;!-- ControllerAs syntax --&gt;
+&lt;!-- Main controller with serveral data used in Inspinia theme on diferent view --&gt;
+&lt;body ng-controller="MainCtrl as main"&gt;
+
+&lt;!-- Wrapper--&gt;
+&lt;div id="wrapper"&gt;
+
+    &lt;!-- Navigation --&gt;
+    &lt;div ng-include="'views/common/navigation.html'"&gt;&lt;/div&gt;
+
+    &lt;!-- Page wraper --&gt;
+    &lt;!-- ng-class with current state name give you the ability to extended customization your view --&gt;
+    &lt;div id="page-wrapper" class="gray-bg {{$state.current.name}}"&gt;
+
+        &lt;!-- Page wrapper --&gt;
+        &lt;div ng-include="'views/common/topnavbar.html'"&gt;&lt;/div&gt;
+
+        &lt;!-- Main view  --&gt;
+        &lt;div ui-view&gt;&lt;/div&gt;
+
+        &lt;!-- Footer --&gt;
+        &lt;div ng-include="'views/common/footer.html'"&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;!-- End page wrapper--&gt;
+
+&lt;/div&gt;
+
+            </pre>
+            <hr>
+            <h3>Page Script </h3>
+            <p>On bottom of file are scripts. Index.html contains all plugin scripts. Of course you will only use that script that you will ned in your app. But after that there is a angular script with controllers and directives files: </p>
+            <pre class="prettyprint linenums">
+
+&lt;!-- Custom and plugin javascript --&gt;
+&lt;script src="js/inspinia.js"&gt;&lt;/script&gt;
+
+&lt;!-- Angular scripts--&gt;
+&lt;script src="js/angular/angular.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/ui-router/angular-ui-router.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/bootstrap/ui-bootstrap-tpls-0.11.0.min.js"&gt;&lt;/script&gt;
+
+&lt;!-- Angular Dependiences --&gt;
+
+    &lt;!-- All angular dependiences used in app --&gt;
+
+&lt;!-- Anglar App Script --&gt;
+&lt;script src="js/app.js"&gt;&lt;/script&gt;
+&lt;script src="js/config.js"&gt;&lt;/script&gt;
+&lt;script src="js/directives.js"&gt;&lt;/script&gt;
+&lt;script src="js/controllers.js"&gt;&lt;/script&gt;
+
+</pre>
+
+            <hr>
+            <h3>Routing with Ui.Router - config.js </h3>
+            <p>To manage all rout we use great plugin Ui.Router. AngularUI Router is a routing framework for AngularJS, which allows you to organize the parts of your interface into a state machine. Unlike the $route service in the Angular ngRoute module, which is organized around URL routes, UI-Router is organized around states, which may optionally have routes, as well as other behavior, attached.
+            <br/>
+            <br/>
+                Below you can see example of configuration ui-view. Configuration routing are in config.js file
+            </p>
+            <pre class="prettyprint linenums">
+
+function config($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise("/dashboard_1");
+    $stateProvider
+        .state('dashboard_1', {
+            url: "/dashboard_1",
+            templateUrl: "views/dashboard_1.html",
+        })
+        .state('flot_chart', {
+            url: "/flot_chart",
+            templateUrl: "views/graph_flot.html",
+            data: { pageTitle: 'Flot chart' }
+        })
+        .state('morris_chart', {
+            url: "/morris_chart",
+            templateUrl: "views/graph_morris.html",
+            data: { pageTitle: 'Morris chart' }
+        })
+
+        .....
+        // Other states
+
+
+</pre>
+            <p>
+               <strong> If you need any help with Ui.Router feel free to write me at support@webapplayers.com.</strong>
+            </p>
+
+
+
+            <h3>App.js</h3>
+            <p>This is a main module for Angular app. Structure of this file is simple - load all external directives. </p>
+            <pre class="prettyprint linenums">
+(function () {
+    angular.module('inspinia', [
+        'ui.router',                    // routing
+        'ui.calendar',                  // calendar
+        'ui.bootstrap',                 // bootstrap
+        'ui.checkbox',                  // custom checkbox
+        'ui.knob',                      // knob input
+        'ui.switchery',                 // iOS7 swich style
+        'angular-peity',                // peity charts
+        'easypiechart',                 // easy pie charts
+        'angular-flot',                 // flot charts
+        'angular-rickshaw',             // rickshaw carts
+        'summernote',                   // text editor
+        'nouislider',                   // slider
+        'datePicker',                   // datapicker
+        'datatables',                   // dynamic tables
+        'localytics.directives',        // chosen select
+        'angles',                       // Charts js
+    ])
+})();
+                </pre>
+            <p>
+                Other directives are implemented in directive.js file.
+            </p>
+
+            <hr>
+            <h3>Directive.js</h3>
+            <p>Main files for custom directives used in Inspinia theme. All directive has own comment in file so you will clearly see what they do.</p>
+            <pre class="prettyprint linenums">
+ *  - pageTitle
+ *  - sideNavigation
+ *  - iboxTools
+ *  - minimalizaSidebar
+ *  - vectorMap
+ *  - morrisArea
+ *  - morrisBar
+ *  - morrisLine
+ *  - morrisDonut
+ *  - sparkline
+ *  - icheck
+ *  - ionRangeSlider
+ *  - dropZone
+ *  - fancyBox
+ *  - responsiveVideo
+                </pre>
+            <hr>
+            <h3>Controllers.js</h3>
+            <p>Main files for custom controllers used in theme. Mainly define data used in several views. All controllers has also own comment in file so you will clearly see what they do.</p>
+            <pre class="prettyprint linenums">
+ *  - MainCtrl
+ *  - dashboardFlotOne
+ *  - dashboardFlotTwo
+ *  - dashboardMap
+ *  - flotChartCtrl
+ *  - morrisChartCtrl
+ *  - rickshawChartCtrl
+ *  - widgetFlotChart
+ *  - modalDemoCtrl
+ *  - ionSlider
+ *  - wizardCtrl
+ *  - CalendarCtrl
+ *  - chartJsCtrl
+                </pre>
+
+            <hr>
+            <h3>Angular_Seed_Project</h3>
+            <p><strong> It is an application skeleton for a typical AngularJS web app. You can use it to quickly bootstrap your angular webapp projects and dev environment for these projects.</strong></p>
+            <h4>It is a best start for new app.</h4>
+<pre class="prettyprint linenums">
+<code>Seed_project/
+    ├── <strong>css/</strong>
+    ├── <strong>font-awsome/</strong>
+    ├── <strong>fonts/</strong>
+    ├── <strong>img/</strong>
+    ├── <strong>js/</strong>
+    ├── <strong>views/</strong>
+    ├── index.html
+</code></pre>
+
+
+            <h3>Any Questions? Need help ?</h3>
+        <p>Contact as with email: <a href="mailto:support@webapplayers.com">support@webapplayers.com</a> </p>
+            <hr>
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        <p>&copy; WebAppLayers 2014 | INSPINIA Admin Theme</p>
+    </footer>
+</div>
+</div>
+
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/google-code-prettify/prettify.js"></script>
+
+<script>
+        $(function(){
+            window.prettyPrint && prettyPrint();
+        })
+</script>
+
+</body>
+</html>
