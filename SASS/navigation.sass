@@ -30,7 +30,7 @@
   display: inline-block
 
 .navbar-top-links li:last-child
-  margin-right: 15px
+  margin-right: 40px
 
 .navbar-top-links li a
   padding: 20px 10px
@@ -197,6 +197,9 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a
   font-size: 12px
   border-radius: 3px
 
+.fixed-nav .slimScrollDiv #side-menu
+  padding-bottom: 60px
+
 .mini-navbar .nav-second-level li a
   padding: 10px 10px 10px 15px
 
@@ -212,7 +215,7 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a
   left: 65px
 
 .navbar-default .special_link a
-  background: #1ab394
+  background: $navy
   color: white
 
 .navbar-default .special_link a:hover
@@ -221,7 +224,19 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a
 
 .navbar-default .special_link a span.label
   background: #fff
-  color: #1ab394
+  color: $navy
+
+.navbar-default .landing_link a
+  background: lighten($navy, 3%)
+  color: white
+
+.navbar-default .landing_link a:hover
+  background: $navy !important
+  color: white
+
+.navbar-default .landing_link a span.label
+  background: #fff
+  color: lighten($navy, 3%)
 
 .logo-element
   text-align: center
@@ -273,7 +288,7 @@ body.mini-navbar .nav-header
   padding: 0
   background-color: $navy
 
-body.mini-navbar #page-wrapper, body.mini-navbar .footer
+body.mini-navbar #page-wrapper
   margin: 0 0 0 70px
 
 body.fixed-sidebar.mini-navbar .footer

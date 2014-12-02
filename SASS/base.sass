@@ -87,6 +87,29 @@ video
 .modal-body
   padding: 20px 30px 30px 30px
 
+.inmodal .modal-body
+  background: #f8fafb
+
+.inmodal .modal-header
+  padding: 30px 15px
+  text-align: center
+
+.animated.modal.fade .modal-dialog
+  -webkit-transform: none
+  -ms-transform: none
+  -o-transform: none
+  transform: none
+
+.inmodal .modal-title
+  font-size: 26px
+
+.inmodal .modal-icon
+  font-size: 84px
+  color: #e2e3e3
+
+.modal-footer
+  margin-top: 0
+
 /* WRAPPERS */
 
 #wrapper
@@ -805,4 +828,10 @@ table.table-mail tr td
 
 .space-30
   margin: 30px 0
+
+
+// Bootstrap issue in 3.3.0 with modal https://github.com/twbs/bootstrap/issues/9855
+// Fix
+body.modal-open
+  padding-right: inherit !important
 
